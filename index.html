@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Zaruber — наработки и инструменты для работы с маркетплейсами. Проект WBin: расширение для парсинга рекламных кампаний и связанных артикулов, сбор статистики из личного кабинета." />
+    <meta property="og:title" content="Zaruber — проекты для маркетплейсов (WBin)" />
+    <meta property="og:description" content="WBin — расширение для парсинга рекламных кампаний и артикулов, сбор статистики с ЛК маркетплейса." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/Zaruber" />
+    <title>Zaruber — проекты для маркетплейсов (WBin)</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#0b0b0f" />
+  </head>
+  <body>
+    <div class="bg-aurora" aria-hidden="true">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="blob b3"></div>
+      <div class="glow"></div>
+    </div>
+    
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">Zaruber</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <h1 class="hero-title">Наработки для работы с маркетплейсами</h1>
+          <p class="hero-subtitle">
+            Здесь собраны мои инструменты и улучшения для аналитики и управления рекламой. Минимум лишнего — максимум пользы.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">
+              Смотреть проекты
+              <span class="icon">→</span>
+            </a>
+            <a class="btn btn-ghost" href="https://github.com/Zaruber" target="_blank" rel="noopener">GitHub профиль</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <h2 class="section-title">Проекты</h2>
+
+          <article class="card highlight">
+            <div class="card-body">
+              <div class="eyebrow">Расширение браузера</div>
+              <div class="platform-icons">
+                <span class="badge" title="Chrome">
+                  <img class="badge-img" src="./svg/Google_Chrome_icon_(February_2022).svg" alt="Google Chrome" />
+                </span>
+              </div>
+              <h3 class="card-title">WBin</h3>
+              <p class="card-subtitle">
+                Инструмент для парсинга рекламных кампаний Wildberries и связанных с ними артикулов,
+                а также для сбора и агрегирования статистики по кампаниям прямо из личного кабинета.
+              </p>
+
+              <div class="features">
+                <div class="feature">
+                  <div class="feature-title">Парсинг кампаний</div>
+                  <div class="feature-text">Извлекает структуру рекламных кампаний, группы, ключевые фразы и привязанные артикулы.</div>
+                </div>
+                <div class="feature">
+                  <div class="feature-title">Статистика из ЛК</div>
+                  <div class="feature-text">Собирает метрики эффективности кампаний из личного кабинета маркетплейса.</div>
+                </div>
+                <div class="feature">
+                  <div class="feature-title">Экспорт данных</div>
+                  <div class="feature-text">Подготовка данных к анализу: CSV/JSON экспорт для BI и табличных инструментов.</div>
+                </div>
+              </div>
+
+              <div class="meta">
+                <div class="meta-item"><span class="dot"></span>Статус: активная разработка</div>
+                <div class="meta-item"><span class="dot"></span>Платформа: Chrome/Chromium-браузеры</div>
+              </div>
+
+              <div class="card-actions">
+                <a class="btn btn-primary" href="https://github.com/Zaruber/wbin/releases/download/extension/WBin_1_4.zip" target="_blank" rel="noopener" download>
+                  Скачать расширение
+                  <span class="icon">⬇</span>
+                </a>
+                <a class="btn btn-ghost" href="https://github.com/Zaruber/wbin" target="_blank" rel="noopener">Открыть на GitHub</a>
+                <a class="btn btn-ghost" href="#wbin-docs" aria-disabled="true">Документация (скоро)</a>
+              </div>
+
+              <details class="install">
+                <summary>Как установить в Chrome</summary>
+                <ol class="steps">
+                  <li>Скачайте ZIP-архив по кнопке выше и распакуйте его.</li>
+                  <li>Откройте: chrome://extensions/</li>
+                  <li>Включите «Режим разработчика» (Developer mode) справа вверху.</li>
+                  <li>Нажмите «Загрузить распакованное» (Load unpacked).</li>
+                  <li>Выберите папку с файлами расширения (где находится manifest.json).</li>
+                </ol>
+              </details>
+            </div>
+          </article>
+
+          <article class="card highlight">
+            <div class="card-body">
+              <div class="eyebrow">Расширение браузера</div>
+              <div class="platform-icons">
+                <span class="badge" title="Chrome">
+                  <img class="badge-img" src="./svg/Google_Chrome_icon_(February_2022).svg" alt="Google Chrome" />
+                </span>
+              </div>
+              <h3 class="card-title">WBsina</h3>
+              <p class="card-subtitle">
+                Инструменты для конкурентного анализа товаров на Wildberries: быстрый поиск по артикулу,
+                характеристики, рейтинги и отзывы, запасы по складам, история цен и отзывов, экспорт.
+              </p>
+
+              <div class="features">
+                <div class="feature">
+                  <div class="feature-title">Анализ товара</div>
+                  <div class="feature-text">Название, бренд, продавец, цены/скидки, рейтинги и отзывы.</div>
+                </div>
+                <div class="feature">
+                  <div class="feature-title">Склады и остатки</div>
+                  <div class="feature-text">Распределение по складам, динамика остатков, детализация по размерам.</div>
+                </div>
+                <div class="feature">
+                  <div class="feature-title">История</div>
+                  <div class="feature-text">Динамика цен и отзывов, сравнение показателей, тренды.</div>
+                </div>
+              </div>
+
+              <div class="meta">
+                <div class="meta-item"><span class="dot"></span>Статус: активная разработка</div>
+                <div class="meta-item"><span class="dot"></span>Платформа: Chrome/Chromium-браузеры</div>
+              </div>
+
+              <div class="card-actions">
+                <a class="btn btn-primary" href="https://github.com/Zaruber/WBsina/archive/refs/tags/auto.zip" target="_blank" rel="noopener" download>
+                  Скачать расширение
+                  <span class="icon">⬇</span>
+                </a>
+                <a class="btn btn-ghost" href="https://github.com/Zaruber/WBsina" target="_blank" rel="noopener">Открыть на GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <div class="eyebrow">Google Sheets / Apps Script</div>
+              <div class="platform-icons">
+                <span class="badge" title="Google Sheets">
+                  <img class="badge-img" src="./svg/Google_Sheets_logo_(2014-2020).svg" alt="Google Sheets" />
+                </span>
+                <span class="badge" title="Apps Script">
+                  <img class="badge-img" src="./svg/Google_Apps_Script.svg" alt="Google Apps Script" />
+                </span>
+              </div>
+              <h3 class="card-title">Sheetswbparser — 🔍 Парсер позиций Wildberries</h3>
+              <p class="card-subtitle">
+                Отслеживайте позиции ваших товаров в поиске Wildberries прямо в Google Таблицах с помощью пользовательской функции.
+              </p>
+
+              <div class="features">
+                <div class="feature">
+                  <div class="feature-title">Формула</div>
+                  <div class="feature-text"><code>=FIND_WB_POSITION(A2; B2)</code></div>
+                </div>
+                <div class="feature">
+                  <div class="feature-title">Простая интеграция</div>
+                  <div class="feature-text">Код вставляется в Apps Script файла таблицы.</div>
+                </div>
+                <div class="feature">
+                  <div class="feature-title">Фокус на задаче</div>
+                  <div class="feature-text">Минимум настроек — используйте как обычную функцию.</div>
+                </div>
+              </div>
+
+              <div class="meta">
+                <div class="meta-item"><span class="dot"></span>Статус: рабочая версия</div>
+                <div class="meta-item"><span class="dot"></span>Платформа: Google Sheets</div>
+              </div>
+
+              <div class="card-actions">
+                <a class="btn btn-primary" href="https://github.com/Zaruber/Sheetswbparser" target="_blank" rel="noopener">Открыть на GitHub</a>
+              </div>
+
+              <details class="install">
+                <summary>Как пользоваться</summary>
+                <ol class="steps">
+                  <li>Откройте в таблице: Расширения → Apps Script.</li>
+                  <li>Скопируйте код проекта в редактор и сохраните. Разрешите доступ при запросе.</li>
+                  <li>В ячейке используйте формулу: <code>=FIND_WB_POSITION(A2; B2)</code>.</li>
+                  <li>Где: A2 — артикул, B2 — поисковый запрос. Результат (позиция) выведите в столбец C.</li>
+                </ol>
+              </details>
+            </div>
+          </article>
+
+          <article class="card about-focus">
+            <div class="card-body">
+              <h3 class="card-title">Обо мне и фокус</h3>
+              <div class="about-focus-grid">
+                <div class="about-col">
+                  <div class="eyebrow">Ник</div>
+                  <div class="about-value">Zaruber</div>
+                  <div class="eyebrow">GitHub</div>
+                  <a class="about-value link" href="https://github.com/Zaruber" target="_blank" rel="noopener">github.com/Zaruber</a>
+                  <div class="eyebrow">Телеграм</div>
+                  <a class="about-value link" href="https://t.me/i_we_vibecoders" target="_blank" rel="noopener">t.me/i_we_vibecoders</a>
+                </div>
+                <div class="focus-col">
+                  <div class="eyebrow">Фокус</div>
+                  <p class="card-subtitle">
+                    Я делаю инструменты, которые помогают мне быстрее принимать решения по рекламе: прозрачные данные,
+                    удобные выгрузки и чистый интерфейс, и чтобы я мог сделать это быстрее. Надеюсь кому-то они тоже помогут. Пишите в телеграм, если есть вопросы.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> Zaruber</div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      (function () {
+        const aurora = document.querySelector('.bg-aurora');
+        if (!aurora) return;
+        const blobs = aurora.querySelectorAll('.blob');
+
+        let targetX = 0, targetY = 0;
+        let dx = 0, dy = 0;
+        let scrollOffsetY = 0;
+
+        const lerp = (a, b, t) => a + (b - a) * t;
+        const animate = () => {
+          dx = lerp(dx, targetX, 0.08);
+          dy = lerp(dy, targetY, 0.08);
+          blobs.forEach((el, i) => {
+            const depth = 1 + i * 0.4; // разные уровни параллакса
+            el.style.setProperty('--dx', (dx / depth).toFixed(2) + 'px');
+            el.style.setProperty('--dy', ((dy + scrollOffsetY) / depth).toFixed(2) + 'px');
+          });
+          requestAnimationFrame(animate);
+        };
+
+        const updateTarget = (clientX, clientY) => {
+          const { innerWidth: w, innerHeight: h } = window;
+          // нормируем в диапазон [-60, 60]px
+          targetX = ((clientX / w) - 0.5) * 120;
+          targetY = ((clientY / h) - 0.5) * 120;
+        };
+
+        window.addEventListener('pointermove', (e) => {
+          updateTarget(e.clientX, e.clientY);
+        }, { passive: true });
+
+        window.addEventListener('deviceorientation', (e) => {
+          const gamma = e.gamma || 0; // лево/право
+          const beta = e.beta || 0;   // вперёд/назад
+          updateTarget((gamma + 45) / 90 * window.innerWidth, (beta + 45) / 90 * window.innerHeight);
+        });
+
+        window.addEventListener('scroll', () => {
+          const ratio = Math.min(1, Math.max(0, (window.scrollY || 0) / window.innerHeight));
+          scrollOffsetY = ratio * 30; // до 30px добавочного смещения вниз
+        }, { passive: true });
+
+        // Искры при клике/таче
+        const colors = ['#ffffff', '#a6d3ff', '#ffd2ea', '#b8ffd9'];
+        function createSparkles(x, y) {
+          const count = 14;
+          for (let i = 0; i < count; i++) {
+            const el = document.createElement('div');
+            el.className = 'sparkle';
+            const size = 6 + Math.random() * 6;
+            el.style.width = size + 'px';
+            el.style.height = size + 'px';
+            el.style.left = x + 'px';
+            el.style.top = y + 'px';
+            el.style.background = `radial-gradient(circle, ${colors[i % colors.length]} 0%, rgba(255,255,255,0) 70%)`;
+            document.body.appendChild(el);
+
+            const angle = Math.random() * Math.PI * 2;
+            const speed = 60 + Math.random() * 100;
+            const dxp = Math.cos(angle) * speed;
+            const dyp = Math.sin(angle) * speed;
+            const duration = 500 + Math.random() * 500;
+            el.animate([
+              { transform: 'translate(-50%, -50%) scale(1)', opacity: 1 },
+              { transform: `translate(calc(-50% + ${dxp}px), calc(-50% + ${dyp}px)) scale(0.6)`, opacity: 0 }
+            ], { duration, easing: 'cubic-bezier(.22,.61,.36,1)', fill: 'forwards' }).addEventListener('finish', () => el.remove());
+          }
+        }
+
+        window.addEventListener('pointerdown', (e) => createSparkles(e.clientX, e.clientY));
+
+        animate();
+      })();
+    </script>
+  </body>
+  </html>
+
+
