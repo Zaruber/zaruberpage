@@ -248,6 +248,8 @@
 
               <div class="card-actions">
                 <a class="btn btn-primary" href="https://github.com/Zaruber/Sheetswbparser" target="_blank" rel="noopener">Открыть на GitHub</a>
+                 <a class="btn btn-ghost" href="https://github.com/Zaruber/Sheetswbparser/blob/main/WildberriesPositionFinder.gs" target="_blank" rel="noopener">Открыть скрипт</a>
+                 <button class="btn btn-ghost" type="button" id="open-sheets-video">Видео гайд</button>
               </div>
 
               <details class="install">
@@ -369,6 +371,52 @@
         window.addEventListener('pointerdown', (e) => createSparkles(e.clientX, e.clientY));
 
         animate();
+      })();
+      // Mini modal for Sheetswbparser video
+      (function () {
+        const btn = document.getElementById('open-sheets-video');
+        if (!btn) return;
+        let modal = null;
+        function createModal() {
+          const wrapper = document.createElement('div');
+          wrapper.className = 'mini-modal is-hidden';
+          wrapper.innerHTML = `
+            <div class="mini-modal__backdrop" data-close></div>
+            <div class="mini-modal__dialog" role="dialog" aria-modal="true" aria-label="Видео гайд Sheetswbparser">
+              <div class="mini-modal__header">
+                <div class="mini-modal__title">Видео гайд</div>
+                <button class="mini-modal__close" type="button" aria-label="Закрыть" data-close>×</button>
+              </div>
+              <div class="mini-modal__body">
+                <video class="mini-modal__video" src="./vid/sheetswbparser.mp4" controls playsinline></video>
+              </div>
+            </div>`;
+          document.body.appendChild(wrapper);
+          return wrapper;
+        }
+        function openModal() {
+          if (!modal) modal = createModal();
+          modal.classList.remove('is-hidden');
+          const video = modal.querySelector('video');
+          if (video) { video.currentTime = 0; video.play().catch(() => {}); }
+        }
+        function closeModal() {
+          if (!modal) return;
+          modal.classList.add('is-hidden');
+          const video = modal.querySelector('video');
+          if (video) { video.pause(); }
+        }
+        document.addEventListener('click', (e) => {
+          const target = e.target;
+          if (!(target instanceof Element)) return;
+          if (target.matches('[data-close]')) {
+            closeModal();
+          }
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closeModal();
+        });
+        btn.addEventListener('click', openModal);
       })();
     </script>
   </body>

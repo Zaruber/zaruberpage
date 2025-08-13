@@ -425,3 +425,46 @@ body {
 .steps li { margin: 6px 0; }
 
 
+/* Mini modal */
+.mini-modal {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+}
+.mini-modal.is-hidden { display: none; }
+.mini-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+}
+.mini-modal__dialog {
+  position: relative;
+  width: min(92vw, 820px);
+  background: var(--bg-elev);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.mini-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--stroke);
+}
+.mini-modal__title { font-weight: 700; }
+.mini-modal__close {
+  height: 32px; width: 32px;
+  border: 1px solid var(--stroke);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+.mini-modal__body { padding: 10px; }
+.mini-modal__video { width: 100%; height: auto; border-radius: 12px; display: block; }
+
