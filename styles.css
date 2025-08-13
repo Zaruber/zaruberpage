@@ -76,6 +76,30 @@ body {
 }
 .nav-link:hover { opacity: 1; }
 
+.header-telegram {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  padding: 0 14px 0 10px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid var(--stroke);
+  background: color-mix(in oklab, var(--bg) 88%, white 12%);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+.header-telegram:hover {
+  transform: translateY(-1px);
+  background: color-mix(in oklab, var(--bg) 72%, white 18%);
+}
+.header-telegram .tg-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
 .hero {
   padding: 72px 0 32px;
 }
